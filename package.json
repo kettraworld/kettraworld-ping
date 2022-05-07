@@ -1,6 +1,6 @@
 {
   "name": "kettraworld-ping",
-  "version": "1.0.9",
+  "version": "1.0.8",
   "description": "você pode usá-lo para manter seu repl.it ou projeto online por 24/7!",
   "main": "index.js",
   "scripts": {
