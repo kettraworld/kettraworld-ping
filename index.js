@@ -19,7 +19,7 @@ module.exports = {
 
     const i = interval || 60000;
 
-    setInterval(() => {
+    setInterval( async () => {
       const res = await fetch(url, {
         headers : { 'User-Agent': 'kettraworld-ping (NPM Package)'}
       }).catch((err) => log(chalk.red(`[ kettraworld-ping ] Error: Failed to ping ${url}: ${err}`)))
@@ -28,11 +28,10 @@ module.exports = {
   },
   async webserver (port) {
     const status = 200;
+    const PORT = port || 3000;
     app.get('*', (req, res) => {
     res.status(status).send(`<code>📡 This project is using <a href="https://www.npmjs.com/package/kettraworld-ping">kettraworld-ping</a> NPM package.</code>`);
     })
-    app.listen(port=3000, () => log(chalk.green(`[ kettraworld-ping ] Webserver listening on the port ${port || 3000}`))).catch(() => {
-      log(chalk.red('[ kettraworld-ping ] There was a error while creating the web server, common issues:\nThe port is already in use\nNo internet connection'))
-    })
+    app.listen(PORT, () => log(chalk.green(`[ kettraworld-ping ] Webserver listening on the port ${port || 3000}`)))
   }
 }
