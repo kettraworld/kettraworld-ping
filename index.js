@@ -31,6 +31,8 @@ module.exports = {
     app.get('*', (req, res) => {
     res.status(status).send(`<code>📡 This project is using <a href="https://www.npmjs.com/package/kettraworld-ping">kettraworld-ping</a> NPM package.</code>`);
     })
-    app.listen(port=3000, () => log(chalk.green(`[ kettraworld-ping ] Webserver listening on the port ${port || 3000}`)))
+    app.listen(port=3000, () => log(chalk.green(`[ kettraworld-ping ] Webserver listening on the port ${port || 3000}`))).catch(() => {
+      log(chalk.red('[ kettraworld-ping ] There was a error while creating the web server, common issues:\nThe port is already in use\nNo internet connection'))
+    })
   }
 }
