@@ -1,7 +1,7 @@
 {
   "name": "kettraworld-ping",
   "version": "1.0.9",
-  "description": "você pode usá-lo para manter seu repl.it ou projeto online por 24/7!",
+  "description": "you can use it to keep your website or project online 24/7!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
