@@ -1,25 +1,21 @@
-# kettraworld-ping
+# information
 
-❤️ se você gostou deste projeto não se esqueça de visita a gente no [github](https://github.com/sebastianjnuwu)
+you can use it to keep your repl.it/site or similar projects online 24/7!
 
-# informações
+•  ⏱️  Easy to use and completely free!
 
-você pode usá-lo para manter seu repl.it/site ou projetos semelhantes on-line 24 horas por dia, 7 dias por semana!
+•  🚀  You can also create a web server for your project, to make it pingable
 
-• ⏱️ Fácil de usar e toltalmente gratis!
-
-• 🚀 Você também pode criar um servidor web para o seu projeto, para torná-lo pingável
-
-• ⚙️ Opção de intervalo de ping personalizado e porta personalizada para opção de servidor da web
+•  ⚙️  Custom ping range option and custom port for web server option
 
 # documentação
 
-| Métodos                              | Modelo | Descrição |
+| methods                              | Model | Description |
 | ------------------------------------ | ------ | ----------|
-| ping("Seu url", seu intervalo em ms)| String, Object | Começa a fazer ping no url fornecido todas as vezes fornecidas |
-| webserver(sua porta) | Objeto | Crie um websever simples para o seu projeto, para torná-lo pingável | 
+| ping("your url", interval in ms)| String, Object | Starts pinging the given url. |
+| webserver(your door) | Objeto | Create a simple websever for your project to make it pingable. | 
 
-# codigo 
+# code 
 
 ```js
 const ping = require("kettraworld-ping") 
@@ -29,4 +25,3 @@ ping.webserver(3000)
 ping.ping("http://0.0.0.0:3000") 
 
 ```
-
