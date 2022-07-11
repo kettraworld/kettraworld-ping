@@ -1,6 +1,6 @@
 {
   "name": "kettraworld-ping",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "you can use it to keep your website or project online 24/7!",
   "main": "index.js",
   "scripts": {
