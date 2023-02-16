@@ -12,16 +12,18 @@ you can use it to keep your repl.it/site or similar projects online 24/7!
 
 | methods                              | Model | Description |
 | ------------------------------------ | ------ | ----------|
-| ping("your url", interval in ms)| String, Object | Starts pinging the given url. |
-| webserver(your door) | Objeto | Create a simple websever for your project to make it pingable. | 
+| ping("url", interval in ms); | String, Number | Starts pinging the given url. |
+| webserver(port); | Number | Create a simple websever for your project to make it pingable. | 
 
 # code 
 
 ```js
-const ping = require("kettraworld-ping") 
+ // importing the package
+import ping from 'kettraworld-ping';
+ 
+ // creating the server, default port 3000
+ping.webserver();
 
-ping.webserver(3000) 
-
-ping.ping("http://0.0.0.0:3000") 
-
+ // ping a website...
+ping.ping('http://0.0.0.0:3000', 10000);
 ```

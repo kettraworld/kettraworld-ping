@@ -1,0 +1,4 @@
+# excluding 
+node_modules
+yarn.lock
+test.js
