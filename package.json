@@ -1,10 +1,11 @@
 {
   "name": "kettraworld-ping",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "you can use it to keep your website or project online 24/7!",
-  "main": "index.js",
+  "type": "module",
+  "main": "ping.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
   "keywords": [
     "ping",
@@ -12,17 +13,21 @@
     "site",
     "webserver",
     "website",
+    "bot",
     "kettraworld-ping"
   ],
   "author": "sebastianjnuwu",
   "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "express": "^4.17.1",
-    "undici": "^5.1.1"
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "undici": "^5.19.1"
   },
   "homepage": "https://github.com/sebastianjnuwu/kettraworld-ping",
   "bugs": {
     "url": "https://github.com/sebastianjnuwu/kettraworld-ping/issues"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0"
   }
 }
