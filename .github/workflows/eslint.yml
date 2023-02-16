@@ -1,0 +1,22 @@
+name: 🐥 ESLint
+
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+ 
+jobs:
+  eslint:
+    name: 🏜️ ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 👻 Install Node v19
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - name: ✨ Install dependencies
+        run: yarn
+      - name: 🌈 Run ESLint
+        run: yarn lint
