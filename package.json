@@ -1,11 +1,11 @@
 {
   "name": "kettraworld-ping",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "you can use it to keep your website or project online 24/7!",
   "type": "module",
   "main": "ping.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint *.js --fix"
   },
   "keywords": [
     "ping",
@@ -28,6 +28,10 @@
     "url": "https://github.com/sebastianjnuwu/kettraworld-ping/issues"
   },
   "devDependencies": {
-    "eslint": "^8.34.0"
+    "eslint": "^8.34.0",
+    "prettier": "^2.8.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

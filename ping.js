@@ -1,15 +1,15 @@
 import { fetch } from "undici";
 import express from "express";
 import colors from "colors";
-const app = express()
 const { log } = console;
+const app = express()
 
 export default {
-  async ping(url, interval) {
+  async ping(name, url, interval) {
     
-  if (!url) return log(colors.red('[ kettraworld-ping ] ') + `Error: The provided url is invalid!`);
+  if (!url) return log(colors.red('[ kettraworld-ping ] ') + `Error in ${name}: The provided url is invalid!`);
   
-  if (interval < 10000) return log(colors.red('[ kettraworld-ping ] ') + `Error: the minimum allowed time is "10000" ms`);
+  if (interval < 10000) return log(colors.red('[ kettraworld-ping ] ') + `Error in ${name}: the minimum allowed time is "10000" ms`);
   
   const isValidUrl = (str) => {
     try {
@@ -20,7 +20,7 @@ export default {
    return true
   }
   
-  if (!isValidUrl(url) || ["<", ">", "<script>", "</script>"].includes(url) || ["%3C", "%3E", "%20"].includes(encodeURIComponent(url))) return log(colors.red('[ kettraworld-ping ] ') + `Error: Invalid url provided "${url}"`);
+  if (!isValidUrl(url) || ["<", ">", "<script>", "</script>"].includes(url) || ["%3C", "%3E", "%20"].includes(encodeURIComponent(url))) return log(colors.red('[ kettraworld-ping ] ') + `Error in ${name}: Invalid url provided "${url}"`);
 
   const i = interval || 60000;
 
@@ -29,9 +29,9 @@ export default {
    headers : { 'User-Agent': 'kettraworld-ping (NPM Package)'} 
    }).catch(() => {});
    
-  if (!res) return log(colors.red('[ kettraworld-ping ] ') + `Error: Failed to ping "${url}"`);
+  if (!res) return log(colors.red('[ kettraworld-ping ] ') + `${name}: Failed to ping "${url}"`);
 
-  if (res) return log(colors.green(`[ kettraworld-ping ] `) + `Ping executed (${url}) with the status "${res.status}"`);
+  if (res) return log(colors.green(`[ kettraworld-ping ] `) + `${name}: Ping executed (${url}) with the status "${res.status}"`);
    }, i);
   },
   

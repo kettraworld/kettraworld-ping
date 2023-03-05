@@ -12,7 +12,7 @@ you can use it to keep your repl.it/site or similar projects online 24/7!
 
 | methods                              | Model | Description |
 | ------------------------------------ | ------ | ----------|
-| ping("url", interval in ms); | String, Number | Starts pinging the given url. |
+| ping("name", url", interval in ms); | String, String, Number | Starts pinging the given url. |
 | webserver(port); | Number | Create a simple websever for your project to make it pingable. | 
 
 # code 
@@ -25,5 +25,5 @@ import ping from 'kettraworld-ping';
 ping.webserver();
 
  // ping a website...
-ping.ping('http://0.0.0.0:3000', 10000);
+ping.ping('localhost','http://0.0.0.0:3000', 10000);
 ```
