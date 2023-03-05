@@ -12,7 +12,7 @@ you can use it to keep your repl.it/site or similar projects online 24/7!
 
 | methods                              | Model | Description |
 | ------------------------------------ | ------ | ----------|
-| ping("name", url", interval in ms); | String, String, Number | Starts pinging the given url. |
+| ping("name", "url", interval in ms); | String, String, Number | Starts pinging the given url. |
 | webserver(port); | Number | Create a simple websever for your project to make it pingable. | 
 
 # code 
