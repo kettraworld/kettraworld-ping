@@ -1,0 +1,63 @@
+Arguments: 
+  /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /data/data/com.termux/files/usr/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.4.0
+
+Platform: 
+  android arm
+
+Trace: 
+  Error: read ECONNABORTED
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)
+
+npm manifest: 
+  {
+    "name": "kettraworld-ping",
+    "version": "1.1.2",
+    "description": "you can use it to keep your website or project online 24/7!",
+    "type": "module",
+    "main": "ping.js",
+    "scripts": {
+      "lint": "eslint *.js --fix"
+    },
+    "keywords": [
+      "ping",
+      "replit",
+      "site",
+      "webserver",
+      "website",
+      "bot",
+      "kettraworld-ping"
+    ],
+    "author": "sebastianjnuwu",
+    "license": "Apache-2.0",
+    "dependencies": {
+      "colors": "^1.4.0",
+      "express": "^4.18.2",
+      "undici": "^5.19.1"
+    },
+    "homepage": "https://github.com/sebastianjnuwu/kettraworld-ping",
+    "bugs": {
+      "url": "https://github.com/sebastianjnuwu/kettraworld-ping/issues"
+    },
+    "devDependencies": {
+      "eslint": "^8.34.0",
+      "prettier": "^2.8.4"
+    },
+    "engines": {
+      "node": ">=16.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
